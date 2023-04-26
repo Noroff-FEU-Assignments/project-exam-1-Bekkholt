@@ -2,6 +2,57 @@ html {
     background-color: #f8f8f8;
 }
 
+.some {
+    display: flex;
+    float: left;
+    padding: 5px;
+}
+
+#searchbar {
+    background-color: #D9D9D9;
+    border-style: none;
+    border-radius: 10px;
+    font-style: italic;
+}
+
 .header_image {
     max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #0A0A0A;
+}
+
+ul {
+    background-color: #D9D6FD;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.menu_links {
+    padding: 5px;
+}
+
+li {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu_icon {
+    max-width: 20%;
+}
+
+h2, h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.icon_decoration {
+    max-width: 40%;
+}
+
+footer {
+    background-color: #D9D6FD;
 }

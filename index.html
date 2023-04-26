@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+        <!-- husk å sette inn tittelsiden ettersom hvilken man trykker på -->
     <title>Eurovisionsquad | Home</title>
     <meta name="description" content="Eurovisionsquad - Eurovision fun for everyone">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,26 +10,41 @@
   <body>
     <header>
         <div class="top_bar">
-            <div class="some"></div>
+              <img class="some" src="images/ic_baseline-facebook.png" alt="Eurovisionsquad Facebook"></div>
+              <img class="some" src="images/mdi_instagram.png" alt="Eurovisionsquad Instagram"></div>
+              <img class="some" src="images/mdi_twitter.png" alt="Eurovisionsquad Twitter"></div>
             <div class="search"></div>
+            <form class="form">
+              <input id="searchbar" title="search" type="text" placeholder="Search"/>
+          </form>
         </div>
         <a href="index.html"><img class="header_image" src="images/squad_logo.png" alt="Eurovisionsquad logo"></a>
-        <div class="menu_bar"></div>
+        <div class="menu_bar">
+        <ul>
+          <li><a href="index.html" class="menu_links">Home</a></li>
+          <li><a href="posts.html" class="menu_links">All posts</a></li>
+          <img class="menu_icon" src="images/squad_icon.png" alt="Eurovisionsquad Icon">
+          <li><a href="about.html"class="menu_links">About us</a></li>
+          <li><a href="contact.html"class="menu_links">Contact</a></li>
+        </ul>
+      </div>
     </header>
     <main>
+      <a href="posts.html"><h2>Latest posts</h2></a>
         <div class="latest_posts">
             <div class="latest_images"></div>
             <div class="latest_titles"></div>
         </div>
         <div class="calenders"></div>
-        <div class="icon_decoration" src="images/squad_icon.png"></div>
+        <div><img class="icon_decoration" src="images/squad_icon.png" alt="Eurovisionsquad Icon"></div>
         <div class="posts">
             <div class="featured_image"></div>
         </div>
-        <div class="see_more"></div>
+        <a href="posts.html"><h3>See more</h3></a>
     </main>
   </body>
   <footer>
+    <div></div>
   </footer>
   <script>
   </script>
