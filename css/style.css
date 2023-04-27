@@ -22,6 +22,7 @@ html {
 a {
     text-decoration: none;
     color: #0A0A0A;
+    font-weight: bold;
 }
 
 ul {
@@ -32,7 +33,7 @@ ul {
 }
 
 .menu_links {
-    padding: 5px;
+    padding: 4px;
 }
 
 li {
@@ -40,17 +41,67 @@ li {
     justify-content: space-evenly;
 }
 
-.menu_icon {
-    max-width: 20%;
+.menu_icon, .icon_decoration {
+    max-width: 10%;
 }
 
-h2, h3 {
+.icon_image {
+    max-width: 25%;
+}
+
+h1, h2, h3, p {
     display: flex;
     justify-content: center;
 }
 
-.icon_decoration {
-    max-width: 40%;
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.posts {
+    background-color: #D9D6FD;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact_form {
+    padding: 2%;
+    margin: 2%;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.no_requirement {
+background: #FFD3DB;
+padding: 2%;
+margin: 2%;
+color: #0f0000b7;
+border-radius: 5px;
+}
+
+.success {
+    background: #D5FFD2;
+    padding: 2%;
+    margin: 2%;
+    color: #070d01b7;
+    border-radius: 5px;
+}
+
+.cta {
+    background-color: #D9D6FD;
+    border-radius: 10px;
+    align-self: center;
+    min-width: 50%;
+} 
+
+.follow {
+padding: 10%;
+}
+
+.big {
+    max-width: 30%;
 }
 
 footer {
