@@ -4,48 +4,61 @@ const postsURL = "wp-json/wp/v2/posts?_embed"
 const fullPostsURL = api + postsURL;
 
 async function getPosts() {
+    
     const response = await fetch(fullPostsURL);
 
     const posts = await response.json();
 
     return posts
+    
 }
 
-function createAllPostsHTML(post) {
+function createPostHTML(post) {
     const container = document.querySelector(".posts");
     const postContainer = document.createElement("div");
+    const imageContainer = document.createElement("div");
 
-    postContainer.classList.add("post");
-    postContainer.id = post.id;
+    postContainer.classList.add("post_cards");
 
-    for (let i = 0; i < post.images.length; i++) {
-        const imgData = post.images[i];
+        const a = document.createElement(`a`);
+        const titleUrl = "post_specific.html?id=";
+        a.href = titleUrl + `${post.id}`;
 
-        const a = document.createElement('a');
-        const imageURL = "post-specific.html?id=";
-        a.href = imageURL + `${post.id}`;
-        
-        const img = a.appendChild(document.createElement('img'));
-        img.src = imgData.src;
-        img.alt = imgData.alt;
-        img.classList.add("icon_decoration");
+        const title = a.appendChild(document.createElement(`h2`));
 
-        postContainer.append(a);
+        const postExcerpt = post.excerpt.rendered;
+        const excerptWithoutTags = postExcerpt.replace(/<[^>]*>/g, '');
+
+        const postImage = postContainer.appendChild(document.createElement(`img`));
+        const imageElement = post._embedded;
+        const featuredImages = imageElement[`wp:featuredmedia`];
+        const featuredImage = featuredImages[0];
+        const image = featuredImage.source_url;
+        postImage.src = image;
+
+        imageContainer.classList.add("image_container")
+        postImage.classList.add("featured_image")
+
+        a.append(postContainer);
+        postContainer.append(title);
+        postContainer.append(excerptWithoutTags);
+        title.append(post.title.rendered);
+        postContainer.append(imageContainer);
+        imageContainer.append(postImage);
+        container.append(a);
     }
 
-    container.append(postContainer)
-}
 
 function createPostsHTML(posts) {
-    for (let i = 0; i < posts.length; i++) {
-        const product = posts[i];
-        createPostsHTML(product)
+    for (let i = 0; i < 10; i++) {
+        const post = posts[i];
+        createPostHTML(post)
     }
 }
 
 async function allPostsPage() {
-    const posts = await getPosts()
-    createPostsHTML(posts)
+    const allPosts = await getPosts()
+    createPostsHTML(allPosts)
 }
 
 allPostsPage()
