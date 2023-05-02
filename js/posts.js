@@ -1,5 +1,5 @@
 const api = "https://noroffapi.bekkholt.no/";
-const postsURL = "wp-json/wp/v2/posts?_embed"
+const postsURL = "wp-json/wp/v2/posts?_embed";
 
 const fullPostsURL = api + postsURL;
 
@@ -10,7 +10,6 @@ async function getPosts() {
     const posts = await response.json();
 
     return posts
-    
 }
 
 function createPostHTML(post) {
