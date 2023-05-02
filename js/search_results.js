@@ -19,13 +19,11 @@ async function getPosts() {
 
 
 function getPostsIncluding(posts, searchText) {
-    console.log(posts, searchText);
     const results = posts.filter(function(post) {
         const postTitle = post.title.rendered.toLowerCase();
         const postExcerpt = post.excerpt.rendered.toLowerCase();
         const inputText = searchText.toLowerCase();
         const including = postTitle.includes(inputText) || postExcerpt.includes(inputText);
-        console.log(postTitle, inputText, including);
         return including;
     });
     return results;
@@ -36,8 +34,6 @@ const searchResult = document.querySelector(".search_result");
 
 function showResults(result) {
     const noResult = result.length === 0;
-
-    console.log(result);
 
     if (noResult) {
         searchResult.innerHTML = `<p>No results found<p>`;
