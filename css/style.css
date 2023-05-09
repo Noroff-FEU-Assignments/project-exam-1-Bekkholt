@@ -22,6 +22,7 @@ html {
 a {
     text-decoration: none;
     color: #0A0A0A;
+    font-family: 'Poppins', sans-serif;
 }
 
 ul {
@@ -51,6 +52,8 @@ li {
 h1, h2, h3, p {
     display: flex;
     justify-content: center;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 form {
@@ -147,4 +150,17 @@ flex-direction: column;
 
 footer {
     background-color: #D9D6FD;
+}
+
+.footer_info {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 2%;
+}
+
+.post_image {
+    border-radius: 30%;
+    max-width: 100%;
+    max-height: 100%;
 }

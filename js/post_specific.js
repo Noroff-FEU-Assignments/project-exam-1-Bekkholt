@@ -1,14 +1,13 @@
 const api = "https://noroffapi.bekkholt.no/";
-const postsURL = "wp-json/wp/v2/posts?_embed";
+const postsURL = "wp-json/wp/v2/posts/";
+const imageURL = "https://noroffapi.bekkholt.no/wp-json/wp/v2/media/"
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
-let id = params.get("id");
+const id = params.get("id");
 
 const fullPostsURL = api + postsURL;
-
-console.log(id)
 
 async function fetchSinglePost(id) {
     
@@ -19,17 +18,55 @@ async function fetchSinglePost(id) {
     return result
 }
 
-console.log(await fetchSinglePost(id));
+// async function fetchImage(singlePost) {
+
+//     const imgElement = singlePost._links;
+//     const featuredImages = imgElement[`wp:featuredmedia`];
+//     const featuredImage = featuredImages[0];
+//     const image = featuredImage.href;
+
+//     const response = await fetch(image);
+
+//     const result = await response.json();
+
+//     return result
+// }
+
+function createPostHTML(singlePost) {
+
+    document.title = "Eurovisionsquad" + " | " + singlePost.title.rendered;
+
+    const postContainer = document.querySelector(".post_content");
+    const imageContainer = document.createElement("div");
+
+    // // featuredimage
+    // const postImage = imageContainer.appendChild(document.createElement(`img`));
+    // const sourceURL = imageData.source_url;
+    // postImage.src = sourceURL;
+
+
+    // title
+    // imageContainer.classList.add("image_container")
+    // postImage.classList.add("featured_image")
+
+    const title = document.createElement("h1");
+    title.innerText = singlePost.title.rendered;
+
+    // append
+    postContainer.append(imageContainer);
+    postContainer.append(title);
+    
+    // text
+    const postText = singlePost.content.rendered;
+    postContainer.innerHTML += postText;
+
+    console.log(postText)
+
+     
+}
 
 const singlePost = await fetchSinglePost(id);
+// const imageData = await fetchImage(singlePost);
+createPostHTML(singlePost);
 
-for (let i = 0; i < singlePost.lenght; i++) {
-    const post = singlePost[i];
-
-    const titleContainer = document.createElement("h2");
-
-    const title = post.title.rendered;
-
-    titleContainer.append(title);
-
-}
+console.log(await fetchSinglePost(id))
