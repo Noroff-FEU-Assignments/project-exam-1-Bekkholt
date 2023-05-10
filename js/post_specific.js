@@ -58,11 +58,22 @@ function createPostHTML(singlePost) {
     
     // text
     const postText = singlePost.content.rendered;
-    postContainer.innerHTML += postText;
+    postContainer.innerHTML += postText;     
+}
 
-    console.log(postText)
+window.hideModal = hideModal;
+window.showModal = showModal;
 
-     
+function showModal(imgSrcFromWP) {
+	const modalElement = document.getElementById("modal");
+	const imgElement = document.getElementById("modalImg");
+	modalElement.classList.remove("hidden");
+	imgElement.src = imgSrcFromWP;
+}
+
+function hideModal() {
+    const modalElement = document.getElementById("modal");
+    modalElement.classList.add("hidden");
 }
 
 const singlePost = await fetchSinglePost(id);
@@ -70,3 +81,4 @@ const singlePost = await fetchSinglePost(id);
 createPostHTML(singlePost);
 
 console.log(await fetchSinglePost(id))
+
