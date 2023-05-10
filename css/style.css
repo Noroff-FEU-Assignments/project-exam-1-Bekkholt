@@ -168,7 +168,7 @@ footer {
 }
 
 #modal {
-    background-color: hsl(50 33% 25% / 0.75);
+    background-color: hsla(0, 0%, 38%, 0.75);
     padding:5rem;
     position: fixed;
     top: 0;
