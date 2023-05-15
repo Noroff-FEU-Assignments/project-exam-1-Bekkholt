@@ -1,7 +1,9 @@
 const api = "https://noroffapi.bekkholt.no/";
 const postsURL = "wp-json/wp/v2/posts?_embed";
+const seeMoreURL = "wp-json/wp/v2/posts?page=2&_embed";
 
 const fullPostsURL = api + postsURL;
+const newPageURL = api + seeMoreURL;
 
 async function getPosts() {
     
@@ -12,6 +14,27 @@ async function getPosts() {
     return posts
 }
 
+async function getNewPage() {
+    
+    const response = await fetch(newPageURL);
+
+    const posts = await response.json();
+
+    return posts
+}
+
+window.seeMorePosts = seeMorePosts;
+
+async function seeMorePosts() {
+    const morePosts = await getNewPage();
+    for (let i = 0; i < morePosts.length; i++) {
+        const post = morePosts[i];
+        createPostHTML(post)
+        const button = document.querySelector(".see_more");
+        button.classList.add("hidden");
+    }
+}
+
 function createPostHTML(post) {
     const container = document.querySelector(".posts");
     const postContainer = document.createElement("div");
@@ -19,33 +42,33 @@ function createPostHTML(post) {
 
     postContainer.classList.add("post_cards");
 
-        const a = document.createElement(`a`);
-        const titleUrl = "post_specific.html?id=";
-        a.href = titleUrl + `${post.id}`;
+    const a = document.createElement(`a`);
+    const titleUrl = "post_specific.html?id=";
+    a.href = titleUrl + `${post.id}`;
 
-        const title = a.appendChild(document.createElement(`h2`));
+    const title = a.appendChild(document.createElement(`h2`));
 
-        const postExcerpt = post.excerpt.rendered;
-        const excerptWithoutTags = postExcerpt.replace(/<[^>]*>/g, '');
+    const postExcerpt = post.excerpt.rendered;
+    const excerptWithoutTags = postExcerpt.replace(/<[^>]*>/g, '');
 
-        const postImage = postContainer.appendChild(document.createElement(`img`));
-        const imageElement = post._embedded;
-        const featuredImages = imageElement[`wp:featuredmedia`];
-        const featuredImage = featuredImages[0];
-        const image = featuredImage.source_url;
-        postImage.src = image;
+    const postImage = postContainer.appendChild(document.createElement(`img`));
+    const imageElement = post._embedded;
+    const featuredImages = imageElement[`wp:featuredmedia`];
+    const featuredImage = featuredImages[0];
+    const image = featuredImage.source_url;
+    postImage.src = image;
 
-        imageContainer.classList.add("image_container")
-        postImage.classList.add("featured_image")
+    imageContainer.classList.add("image_container")
+    postImage.classList.add("featured_image")
 
-        a.append(postContainer);
-        postContainer.append(title);
-        postContainer.append(excerptWithoutTags);
-        title.append(post.title.rendered);
-        postContainer.append(imageContainer);
-        imageContainer.append(postImage);
-        container.append(a);
-    }
+    a.append(postContainer);
+    postContainer.append(title);
+    postContainer.append(excerptWithoutTags);
+    title.append(post.title.rendered);
+    postContainer.append(imageContainer);
+    imageContainer.append(postImage);
+    container.append(a);
+}
 
 
 function createPostsHTML(posts) {
