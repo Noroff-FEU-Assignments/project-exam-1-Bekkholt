@@ -27,17 +27,22 @@ const imgDatas = await getImages();
 const postDatas = await getPosts();
 
 function displayPostsDesktop(imgDatas) {
-    const containerDivs = document.querySelectorAll(".sliderImage");
     for (let i = 0; i < 4; i++) {
         const imgData = imgDatas[i];
         const postData = postDatas[i];
 
-        const postImageElement = containerDivs[i].appendChild(document.createElement(`img`));
+        const outerContainer = document.querySelector(".slider");
+        const innerContainer = document.createElement(`div`);
+        const seeMoreButton = document.getElementById("see_more_button");
+        innerContainer.classList.add("sliderImage");
+        outerContainer.insertBefore(innerContainer, seeMoreButton);
+
+        const postImageElement = innerContainer.appendChild(document.createElement(`img`));
         const imgURL = imgData.source_url;
         postImageElement.src = imgURL;
         postImageElement.classList.add("post_image");
 
-        const aElement = containerDivs[i].appendChild(document.createElement(`a`));
+        const aElement = innerContainer.appendChild(document.createElement(`a`));
         const hrefText = `post_specific.html?id=${postData.id}`;
         aElement.href = hrefText;
         const titleElement = aElement.appendChild(document.createElement(`h2`));
@@ -47,7 +52,8 @@ function displayPostsDesktop(imgDatas) {
 }
 
 function displayPostMobile(postDatas) {
-    const container = document.querySelector(".sliderImage");
+
+    const container = document.querySelector(".slider");
     const postContainer = document.createElement("div");
     const imageContainer = document.createElement("div");
 
@@ -80,42 +86,6 @@ function displayPostMobile(postDatas) {
     imageContainer.append(postImage);
     container.append(a);
 }
-
-// function createPostHTML(post) {
-//     const container = document.querySelector(".posts");
-//     const postContainer = document.createElement("div");
-//     const imageContainer = document.createElement("div");
-
-//     postContainer.classList.add("post_cards");
-
-//     const a = document.createElement(`a`);
-//     const titleUrl = "post_specific.html?id=";
-//     a.href = titleUrl + `${post.id}`;
-
-//     const title = a.appendChild(document.createElement(`h2`));
-
-//     const postExcerpt = post.excerpt.rendered;
-//     const excerptWithoutTags = postExcerpt.replace(/<[^>]*>/g, '');
-
-//     const postImage = postContainer.appendChild(document.createElement(`img`));
-//     const imageElement = post._embedded;
-//     const featuredImages = imageElement[`wp:featuredmedia`];
-//     const featuredImage = featuredImages[0];
-//     const image = featuredImage.source_url;
-//     postImage.src = image;
-
-//     imageContainer.classList.add("image_container")
-//     postImage.classList.add("featured_image")
-
-//     a.append(postContainer);
-//     postContainer.append(title);
-//     postContainer.append(excerptWithoutTags);
-//     title.append(post.title.rendered);
-//     postContainer.append(imageContainer);
-//     imageContainer.append(postImage);
-//     container.append(a);
-// }
-
 
 function createPostsMobile(postDatas) {
     for (let i = 0; i < 4; i++) {
