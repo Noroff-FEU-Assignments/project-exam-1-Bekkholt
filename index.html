@@ -32,10 +32,15 @@
       </div>
     </header>
     <main>
-      <a href="posts.html"><h1>Latest posts</h1></a>
-        <div class="posts latest">
-            <div class="latest_images"></div>
-            <div class="latest_titles"></div>
+      <h1>Latest posts</h1>
+        <div class="slider">
+            <div class="sliderImage"></div>
+            <div class="sliderImage"></div>
+            <div class="sliderImage"></div>
+            <div class="sliderImage"></div>
+            <a id="see_more_button" href="posts.html"><button class="see_more sliderImage">See more</button></a>
+            <button id="button_next" class="sliderButton nextButton"></button>
+            <button id="button_prev" class="sliderButton prevButton"></button>
         </div>
         <div class="image"><img class="icon_decoration" src="images/squad_icon.png" alt="Eurovisionsquad Icon"></div>
         <a href="posts.html"><h2>All posts</h2></a>
@@ -56,8 +61,8 @@
       <p>eurovisionsquad.gmail.com</p>
     </div>
   </footer>
-  <script type="module" src="js/posts.js"></script>
   <script type="module" src="js/search_bar.js"></script>
+  <script type="module" src="js/latest_posts.js"></script>
 </html>
 
 <!-- The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. 

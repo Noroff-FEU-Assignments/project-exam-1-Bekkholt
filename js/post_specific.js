@@ -79,6 +79,3 @@ function hideModal() {
 const singlePost = await fetchSinglePost(id);
 // const imageData = await fetchImage(singlePost);
 createPostHTML(singlePost);
-
-console.log(await fetchSinglePost(id))
-

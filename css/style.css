@@ -194,3 +194,48 @@ footer {
     right: 0;
     background: rgb(145, 215, 145);
   }
+
+  .slider {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    position: relative;
+    border-radius: 15px;
+  }
+
+  .sliderImage {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: absolute;
+    transition: all 0.5s;
+  }
+
+  .sliderButton {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+  }
+
+  .sliderButton:active {
+    transform: scale(1.1);
+  }
+
+  .prevButton {
+    top: 45%;
+    left: 2%;
+  }
+
+  .nextButton {
+    top: 45%;
+    right: 2%;
+  }
+
+
