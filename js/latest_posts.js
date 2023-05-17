@@ -40,7 +40,7 @@ function displayPostsDesktop(imgDatas) {
         const postImageElement = innerContainer.appendChild(document.createElement(`img`));
         const imgURL = imgData.source_url;
         postImageElement.src = imgURL;
-        postImageElement.classList.add("post_image");
+        postImageElement.classList.add("featured_image");
 
         const aElement = innerContainer.appendChild(document.createElement(`a`));
         const hrefText = `post_specific.html?id=${postData.id}`;

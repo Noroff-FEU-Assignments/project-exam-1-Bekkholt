@@ -15,6 +15,7 @@ html {
     font-style: italic;
     width: 60%;
     margin-left: 35%;
+    padding: 5px;
 }
 
 .header_image {
@@ -73,12 +74,16 @@ form {
 .posts {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .post_cards {
     background-color: #D9D6FD;
     margin: 5%;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image_container {
@@ -122,8 +127,9 @@ border-radius: 5px;
 .cta {
     background-color: #D9D6FD;
     border-radius: 10px;
+    padding: 5px;
     align-self: center;
-    min-width: 50%;
+    width: 30%;
 } 
 
 .follow {
@@ -206,22 +212,75 @@ footer {
     border-style: none;
     background-color:#f8f8f8;
     width: 100%;
+    cursor: pointer;
   }
 
   @media (min-width: 200px) and (max-width: 400px) {
+    a {
+        text-decoration: none;
+        color: #0A0A0A;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+    }
 
   }
 
 
   @media (min-width: 600px) and (max-width: 999px) {
 
+    a {
+        text-decoration: none;
+        color: #0A0A0A;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .post_cards {
+        background-color: #D9D6FD;
+        width: 400px;
+        margin: 5%;
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    
+a {
+    text-decoration: none;
+    color: #0A0A0A;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    
+}
   }
 
   @media (min-width: 1000px) {
+
+    .some {
+        display: flex;
+        float: left;
+        padding: 5px;
+    }
+    
+    #searchbar {
+        background-color: #D9D9D9;
+        border-style: none;
+        border-radius: 10px;
+        font-style: italic;
+        width: 30%;
+        margin-left: 65%;
+    }
+    
+    .header_image {
+        max-width: 100%;
+    }
+
     .slider {
         width: 100%;
         max-width: 800px;
-        height: 700px;
+        height: 500px;
         position: relative;
         border-radius: 15px;
       }
@@ -229,7 +288,6 @@ footer {
       .sliderImage {
         width: 100%;
         max-width: 800px;
-        height: 500px;
         position: absolute;
         transition: all 0.5s;
         display: flex;
@@ -238,15 +296,14 @@ footer {
     
       .sliderButton {
         position: absolute;
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         padding: 10px;
         border: none;
         border-radius: 50%;
         z-index: 10px;
         cursor: pointer;
         background-color:#D9D6FD;
-        font-size: 18px;
       }
     
       .sliderButton:active {
@@ -254,12 +311,44 @@ footer {
       }
     
       .prevButton {
-        top: 45%;
-        left: 2%;
+        top: 50%;
+        left: 5%;
       }
     
       .nextButton {
-        top: 45%;
-        right: 2%;
+        top: 50%;
+        right: 5%;
       }
+
+      a {
+        text-decoration: none;
+        color: #0A0A0A;
+        font-family: 'Poppins', sans-serif;
+        font-size: xx-large;
+    }
+
+    h1, h2, h3 {
+        display: flex;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+        font-size: xx-large
+    }
+
+    .featured_image {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        padding: 2%;
+        object-fit: cover; 
+    }
+
+    .icon_decoration {
+        padding: 10%;
+    }
+
+    p {
+        padding: 1% 20%;
+        display: flex;
+        justify-content: center;
+    }
   }
