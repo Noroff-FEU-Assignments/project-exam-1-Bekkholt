@@ -1,5 +1,6 @@
 const api = "https://noroffapi.bekkholt.no/";
 const postsURL = "wp-json/wp/v2/posts?_embed";
+const seeMoreURL = "wp-json/wp/v2/posts?page=2&_embed";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -7,6 +8,7 @@ const params = new URLSearchParams(queryString);
 const search = params.get("search");
 
 const fullPostsURL = api + postsURL;
+const newPageURL = api + seeMoreURL;
 
 async function getPosts() {
     
@@ -17,6 +19,14 @@ async function getPosts() {
     return posts
 }
 
+async function getNewPage() {
+    
+    const response = await fetch(newPageURL);
+
+    const posts = await response.json();
+
+    return posts
+}
 
 function getPostsIncluding(posts, searchText) {
     const results = posts.filter(function(post) {
@@ -76,7 +86,7 @@ function showResults(result) {
 }
 
 async function allResultsPage() {
-    const allPosts = await getPosts()
+    const allPosts = await getPosts() && await getNewPage();
     const filteredPosts = getPostsIncluding(allPosts, search);
     showResults(filteredPosts);
 }
