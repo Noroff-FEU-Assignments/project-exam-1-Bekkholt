@@ -216,7 +216,6 @@ footer {
   }
 
   @media (min-width: 200px) and (max-width: 400px) {
-   
     a {
         text-decoration: none;
         color: #0A0A0A;
@@ -229,14 +228,13 @@ footer {
 
 
   @media (min-width: 600px) and (max-width: 999px) {
-    
+
     a {
         text-decoration: none;
         color: #0A0A0A;
         font-family: 'Poppins', sans-serif;
         display: flex;
         justify-content: center;
-        font-size: larger;
     }
     
     .post_cards {
@@ -247,6 +245,16 @@ footer {
         display: flex;
         flex-wrap: wrap;
     }
+
+    
+a {
+    text-decoration: none;
+    color: #0A0A0A;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    
+}
+  }
 
   @media (min-width: 1000px) {
 
@@ -344,4 +352,3 @@ footer {
         justify-content: center;
     }
   }
-}
