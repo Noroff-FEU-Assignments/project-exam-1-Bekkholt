@@ -250,7 +250,11 @@ footer {
         display: flex;
         flex-wrap: wrap;
     }
-
+  
+    #searchbar {
+        width: 15em;
+        margin-left: 20em;
+    }
     
 a {
     text-decoration: none;
@@ -270,16 +274,12 @@ a {
     }
     
     #searchbar {
-        background-color: #D9D9D9;
-        border-style: none;
-        border-radius: 10px;
-        font-style: italic;
-        width: 30%;
-        margin-left: 65%;
+        width: 30em;
+        margin-left: 35em;
     }
     
     .header_image {
-        max-width: 50%;
+        max-width: 100%;
     }
 
     .slider {
@@ -330,13 +330,16 @@ a {
     }
 
     h1, h2, h3 {
-        display: flex;
-        justify-content: center;
-        font-family: 'Poppins', sans-serif;
         font-size: xx-large
     }
 
     .icon_decoration {
         padding: 10%;
+    }
+
+    .featured_image {
+        border-radius: 50%;
+        height: 500px;
+        width: 500px;
     }
   }
