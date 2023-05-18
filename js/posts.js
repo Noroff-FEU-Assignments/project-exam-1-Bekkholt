@@ -42,14 +42,16 @@ function createPostHTML(post) {
 
     postContainer.classList.add("post_cards");
 
-    const a = document.createElement(`a`);
+    const aElement = document.createElement(`a`);
     const titleUrl = "post_specific.html?id=";
-    a.href = titleUrl + `${post.id}`;
+    aElement.href = titleUrl + `${post.id}`;
 
-    const title = a.appendChild(document.createElement(`h2`));
+    const title = aElement.appendChild(document.createElement(`h2`));
 
-    const postExcerpt = post.excerpt.rendered;
-    const excerptWithoutTags = postExcerpt.replace(/<[^>]*>/g, '');
+    const postExcerptText = post.excerpt.rendered;
+    const excerptWithoutTagsText = postExcerptText.replace(/<[^>]*>/g, '');
+    const excerptElement = aElement.appendChild(document.createElement(`p`));
+    excerptElement.textContent = excerptWithoutTagsText;
 
     const postImage = postContainer.appendChild(document.createElement(`img`));
     const imageElement = post._embedded;
@@ -61,13 +63,13 @@ function createPostHTML(post) {
     imageContainer.classList.add("image_container")
     postImage.classList.add("featured_image")
 
-    a.append(postContainer);
+    aElement.append(postContainer);
     postContainer.append(title);
-    postContainer.append(excerptWithoutTags);
+    postContainer.append(excerptElement);
     title.append(post.title.rendered);
     postContainer.append(imageContainer);
     imageContainer.append(postImage);
-    container.append(a);
+    container.append(aElement);
 }
 
 
