@@ -96,6 +96,8 @@ function createPostsMobile(postDatas) {
 
 let isTouchScreen = `ontouchstart` in window || navigator.maxTouchPoints;
 
+console.log(isTouchScreen);
+
 if (isTouchScreen === true) {
     createPostsMobile(postDatas);
     const seeMore = document.getElementById("see_more_button");

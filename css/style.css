@@ -2,9 +2,15 @@ html {
     background-color: #f8f8f8;
 }
 
+main {
+    height: 100%;
+}
+
 .top_bar, .bottom_bar {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin: 1%;
 }
 
 .some {
@@ -19,8 +25,11 @@ html {
     border-radius: 10px;
     font-style: italic;
     width: 100%;
-    margin-left: 50%;
     padding: 5px;
+}
+
+.form {
+    margin-left: 30%;
 }
 
 .header_image {
@@ -68,6 +77,10 @@ h1, h2, h3, p {
     justify-content: center;
     font-family: 'Poppins', sans-serif;
 
+}
+
+p {
+    margin: 0%;
 }
 
 form {
@@ -235,12 +248,18 @@ footer {
   @media (min-width: 600px) and (max-width: 999px) {
 
     a {
-        text-decoration: none;
-        color: #0A0A0A;
-        font-family: 'Poppins', sans-serif;
         display: flex;
         justify-content: center;
+        font-size: larger;
     }
+
+    .header_image {
+        max-width: 70%;
+    }
+
+    ul {
+        height: 5rem;
+      }
     
     .post_cards {
         background-color: #D9D6FD;
@@ -250,19 +269,6 @@ footer {
         display: flex;
         flex-wrap: wrap;
     }
-  
-    #searchbar {
-        width: 15em;
-        margin-left: 20em;
-    }
-    
-a {
-    text-decoration: none;
-    color: #0A0A0A;
-    font-family: 'Poppins', sans-serif;
-    font-size: larger;
-    
-}
   }
 
   @media (min-width: 1000px) {
@@ -273,21 +279,19 @@ a {
         padding: 5px;
     }
     
-    #searchbar {
-        width: 30em;
-        margin-left: 35em;
-    }
-    
     .header_image {
-        max-width: 100%;
+        max-width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .slider {
         width: 100%;
-        max-width: 800px;
-        height: 500px;
+        height: 50rem;
         position: relative;
         border-radius: 15px;
+        overflow: hidden;
       }
     
       .sliderImage {
@@ -316,13 +320,17 @@ a {
       }
     
       .prevButton {
-        top: 50%;
+        top: 40%;
         left: 5%;
       }
     
       .nextButton {
-        top: 50%;
+        top: 40%;
         right: 5%;
+      }
+
+      ul {
+        height: 5rem;
       }
 
       a {
