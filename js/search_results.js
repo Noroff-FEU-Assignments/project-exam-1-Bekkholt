@@ -39,6 +39,7 @@ function getPostsIncluding(posts, searchText) {
     return results;
 }
 
+const mergePages = [...await getPosts(),...await getNewPage()];
 
 const searchResult = document.querySelector(".search_result");
 
@@ -86,7 +87,7 @@ function showResults(result) {
 }
 
 async function allResultsPage() {
-    const allPosts = await getPosts() && await getNewPage();
+    const allPosts = mergePages;
     const filteredPosts = getPostsIncluding(allPosts, search);
     showResults(filteredPosts);
 }
