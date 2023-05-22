@@ -153,6 +153,7 @@ border-radius: 5px;
     align-self: center;
     width: 30%;
     outline-style: auto;
+    outline-color: #0A0A0A;
 } 
 
 .follow {
@@ -248,6 +249,7 @@ figure {
 
   input, textarea {
     outline-style: auto;
+    outline-color: #0A0A0A;
   }
 
   @media (min-width: 200px) and (max-width: 599px) {
