@@ -187,13 +187,17 @@ flex-direction: column;
 
 footer {
     background-color: #D9D6FD;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2% 0%;
+    margin: 2%;
 }
 
 .footer_info {
     display: flex;
     flex-direction: column;
     align-items: end;
-    padding: 0% 2%;
 }
 
 #modal {
@@ -276,10 +280,7 @@ figure {
     }
     
     .post_cards {
-        background-color: #D9D6FD;
         width: 400px;
-        margin: 5%;
-        padding: 2rem;
         display: flex;
         flex-wrap: wrap;
     }
@@ -357,7 +358,11 @@ figure {
     }
 
     h1, h2, h3 {
-        font-size: xx-large
+        font-size: xx-large;
+    }
+
+    p {
+        padding: 0% 15%;
     }
 
     .icon_decoration {
@@ -366,12 +371,27 @@ figure {
 
     .featured_image {
         border-radius: 50%;
-        height: 500px;
-        width: 500px;
+        height: 350px;
+        width: 350px;
+    }
+
+    .posts {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .post_cards {
+        width: 600px;
+        height: 700px;
     }
 
     .post_image {
         max-width: 30rem;
         max-height: 60rem;
+    }
+
+    footer {
+        padding: 1% 0%;
+        margin: 1%;
     }
   }
