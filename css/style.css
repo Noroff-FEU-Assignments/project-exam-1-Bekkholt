@@ -152,6 +152,7 @@ border-radius: 5px;
     padding: 5px;
     align-self: center;
     width: 30%;
+    outline-style: auto;
 } 
 
 .follow {
