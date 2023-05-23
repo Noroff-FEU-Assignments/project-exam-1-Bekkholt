@@ -42,7 +42,7 @@ a {
     font-family: 'Poppins', sans-serif;
 }
 
-ul {
+.menu_bar {
     background-color: #D9D6FD;
     display: flex;
     flex-direction: row;
@@ -51,9 +51,6 @@ ul {
     padding-top: 4%;
     padding-bottom: 1%;
     justify-content: space-evenly;
-}
-
-.menu_bar {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -65,7 +62,8 @@ li {
 }
 
 .menu_icon, .icon_decoration {
-    max-width: 10%;
+    width: 5%;
+    height: 5%;
 }
 
 .icon_image {
@@ -306,7 +304,7 @@ figure {
     }
     
     .header_image {
-        max-width: 60%;
+        max-width: 50%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -360,8 +358,8 @@ figure {
         max-width: 50%;
       }
 
-      ul {
-        height: 5rem;
+      li {
+        height: 3rem;
       }
 
       a {
