@@ -79,7 +79,7 @@ function createPostHTML(post) {
     postImage.src = image;
 
     imageContainer.classList.add("image_container")
-    postImage.classList.add("featured_image")
+    postImage.classList.add("card_image")
 
     aElement.append(postContainer);
     postContainer.append(title);
