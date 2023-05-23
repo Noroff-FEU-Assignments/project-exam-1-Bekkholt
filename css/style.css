@@ -56,11 +56,6 @@ a {
     justify-content: space-evenly;
 }
 
-li {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .menu_icon, .icon_decoration {
     width: 5%;
     height: 5%;
@@ -356,10 +351,6 @@ figure {
 
       .see_more_icon {
         max-width: 50%;
-      }
-
-      li {
-        height: 3rem;
       }
 
       a {
