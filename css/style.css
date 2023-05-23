@@ -46,23 +46,14 @@ a {
     background-color: #D9D6FD;
     display: flex;
     flex-direction: row;
-    list-style: none;
-    padding-left: 0%;
-    padding-top: 4%;
-    padding-bottom: 1%;
-    justify-content: space-evenly;
-    display: flex;
-    flex-direction: row;
+    margin: 5% 0%;
+    padding: 4% 0%;
     justify-content: space-evenly;
 }
 
 .menu_icon, .icon_decoration {
-    width: 5%;
-    height: 5%;
-}
-
-.icon_image {
-    max-width: 25%;
+    width: 8%;
+    height: 8%;
 }
 
 h1, h2, h3, p {
