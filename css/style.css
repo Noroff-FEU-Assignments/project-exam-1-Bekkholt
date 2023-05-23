@@ -134,6 +134,12 @@ form {
     object-fit: cover; 
 }
 
+.center {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .contact_form {
     padding: 2%;
     margin: 2%;
@@ -386,6 +392,12 @@ figure {
         max-width: 50%;
       }
 
+      .featured_image {
+        border-radius: 50%;
+        height: 350px;
+        width: 350px;
+    }
+
       a {
         font-size: xx-large;
     }
@@ -402,25 +414,18 @@ figure {
         padding: 2%;
     }
 
-    .featured_image {
-        border-radius: 50%;
-        height: 350px;
-        width: 350px;
-    }
-
     .posts {
         flex-direction: column;
         align-content: center;
     }
 
-    .post_cards {
-        width: 600px;
-        height: 700px;
-    }
-
     .post_image {
         max-width: 30rem;
         max-height: 60rem;
+    }
+
+    .post_cards {
+        max-width: 50%;
     }
 
     footer {

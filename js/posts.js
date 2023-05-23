@@ -43,6 +43,7 @@ function createPostHTML(post) {
     postContainer.classList.add("post_cards");
 
     const aElement = document.createElement(`a`);
+    aElement.classList.add("center");
     const titleUrl = "post_specific.html?id=";
     aElement.href = titleUrl + `${post.id}`;
 
