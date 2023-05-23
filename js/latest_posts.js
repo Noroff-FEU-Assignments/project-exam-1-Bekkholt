@@ -23,8 +23,23 @@ async function getPosts() {
     return posts
 }
 
+const loaderContainer = document.querySelector(".slider");
+const imageSpinner = document.getElementById("image_spinner");
+
+function showLoader() {
+    loaderContainer.classList.add("hidden");
+    imageSpinner.classList.add("loader");
+}
+
+function stopLoader() {
+    imageSpinner.classList.remove("loader");
+    loaderContainer.classList.remove("hidden");
+}
+
+showLoader();
 const imgDatas = await getImages();
 const postDatas = await getPosts();
+stopLoader();
 
 function displayPostsDesktop(imgDatas) {
     for (let i = 0; i < 4; i++) {

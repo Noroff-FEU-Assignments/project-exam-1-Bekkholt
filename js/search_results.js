@@ -28,6 +28,23 @@ async function getNewPage() {
     return posts
 }
 
+const loaderContainer = document.querySelector(".search_result");
+const imageSpinner = document.getElementById("image_spinner");
+
+function showLoader() {
+    loaderContainer.classList.add("hidden");
+    imageSpinner.classList.add("loader");
+}
+
+function stopLoader() {
+    imageSpinner.classList.remove("loader");
+    loaderContainer.classList.remove("hidden");
+}
+
+showLoader();
+const postDatas = await getPosts();
+stopLoader();
+
 function getPostsIncluding(posts, searchText) {
     const results = posts.filter(function(post) {
         const postTitle = post.title.rendered.toLowerCase();
