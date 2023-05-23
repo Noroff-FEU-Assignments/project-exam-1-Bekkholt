@@ -141,8 +141,8 @@ form {
 
 .image_container {
     border-radius: 100%;
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     max-inline-size: 100%;
 }
 
@@ -468,5 +468,11 @@ figure {
 
     .contact_form {
         padding: 0% 20%;
+    }
+
+    .image_container {
+        width: 400px;
+        height: 400px;
+        max-inline-size: 100%;
     }
   }
