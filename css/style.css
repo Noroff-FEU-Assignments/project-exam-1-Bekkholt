@@ -59,7 +59,7 @@ a {
     background-color: #D9D6FD;
     display: flex;
     flex-direction: row;
-    margin: 5% 2%;
+    margin: 5% 0%;
     padding: 4% 0%;
     justify-content: space-evenly;
 }
@@ -319,14 +319,19 @@ figure {
     }
     
     .header_image {
-        max-width: 50%;
+        max-width: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
 
     .menu_bar {
+        margin: 1% 0%;
         padding: 2% 0%;
+    }
+
+    .menu_icon {
+        width: 5%;
     }
 
     .menu_links {
@@ -335,7 +340,7 @@ figure {
 
     .slider {
         width: 100%;
-        height: 50rem;
+        height: 30rem;
         position: relative;
         border-radius: 15px;
         overflow: hidden;
@@ -394,7 +399,7 @@ figure {
     }
 
     .icon_decoration {
-        padding: 10%;
+        padding: 2%;
     }
 
     .featured_image {
