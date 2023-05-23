@@ -160,7 +160,7 @@ form {
     justify-content: center;
 }
 
-.contact_form {
+.contact_form_input {
     padding: 2%;
     margin: 2%;
     max-width: 100%;
@@ -334,6 +334,15 @@ figure {
         display: flex;
         flex-wrap: wrap;
     }
+
+    .about_text {
+        padding: 0% 20%;
+    }
+
+    .contact_form {
+        padding: 0% 20%;
+    }
+
   }
 
   @media (min-width: 1000px) {
@@ -409,7 +418,7 @@ figure {
       }
 
       .see_more_icon {
-        max-width: 50%;
+        max-width: 40%;
       }
 
       .featured_image {
@@ -451,5 +460,13 @@ figure {
     footer {
         padding: 1% 0%;
         margin: 1%;
+    }
+
+    .about_text {
+        padding: 0% 35%;
+    }
+
+    .contact_form {
+        padding: 0% 20%;
     }
   }
