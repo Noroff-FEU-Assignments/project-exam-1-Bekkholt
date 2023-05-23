@@ -67,7 +67,14 @@ p {
     padding: 5%;
 }
 
-button, #see_more_button {
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: #0A0A0A;
+}
+
+#see_more_button {
     font-family: 'Poppins', sans-serif;
     font-size: xx-large;
     font-weight: bold;
