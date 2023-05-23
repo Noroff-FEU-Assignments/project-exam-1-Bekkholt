@@ -36,6 +36,10 @@ main {
     max-width: 100%;
 }
 
+.title {
+    text-decoration: underline;
+}
+
 a {
     text-decoration: none;
     color: #0A0A0A;
@@ -49,6 +53,10 @@ a {
     margin: 5% 2%;
     padding: 4% 0%;
     justify-content: space-evenly;
+}
+
+.menu_links {
+    font-weight: bold;
 }
 
 .menu_icon, .icon_decoration {

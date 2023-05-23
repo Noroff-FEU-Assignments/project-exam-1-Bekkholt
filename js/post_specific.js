@@ -26,6 +26,7 @@ function createPostHTML(singlePost) {
     const imageContainer = document.createElement("div");
 
     const title = document.createElement("h1");
+    title.classList.add("title")
     title.innerText = singlePost.title.rendered;
 
     postContainer.append(imageContainer);
