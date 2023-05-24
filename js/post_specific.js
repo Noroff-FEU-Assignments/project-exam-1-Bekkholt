@@ -1,6 +1,6 @@
 const api = "https://noroffapi.bekkholt.no/";
 const postsURL = "wp-json/wp/v2/posts/";
-const imageURL = "https://noroffapi.bekkholt.no/wp-json/wp/v2/media/"
+const imageURL = "https://noroffapi.bekkholt.no/wp-json/wp/v2/media/";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

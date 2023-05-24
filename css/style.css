@@ -1,5 +1,11 @@
+:root {
+    --white: #f8f8f8;
+    --purple: #D9D6FD;
+    --black: #0A0A0A;
+}
+
 html {
-    background-color: #f8f8f8;
+    background-color: var(--white);
 }
 
 main {
@@ -14,7 +20,7 @@ main {
 }
 
 footer {
-    background-color: #D9D6FD;
+    background-color: var(--purple);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,7 +35,7 @@ footer {
 }
 
 #searchbar {
-    background-color: #D9D9D9;
+    background-color: var(--white);
     border-style: none;
     border-radius: 10px;
     font-style: italic;
@@ -51,12 +57,12 @@ footer {
 
 a {
     text-decoration: none;
-    color: #0A0A0A;
+    color: var(--black);
     font-family: 'Poppins', sans-serif;
 }
 
 .menu_bar {
-    background-color: #D9D6FD;
+    background-color: var(--purple);
     display: flex;
     flex-direction: row;
     margin: 5% 0%;
@@ -97,14 +103,14 @@ button {
     font-family: 'Poppins', sans-serif;
     font-size: large;
     font-weight: bold;
-    color: #0A0A0A;
+    color: var(--black);
 }
 
 #see_more_button {
     font-family: 'Poppins', sans-serif;
     font-size: xx-large;
     font-weight: bold;
-    color: #0A0A0A;
+    color: var(--black);
 }
 
 .business_inquiries {
@@ -124,7 +130,7 @@ form {
 }
 
 .post_cards {
-    background-color: #D9D6FD;
+    background-color: var(--purple);
     margin: 5%;
     padding: 2rem;
     display: flex;
@@ -184,13 +190,13 @@ border-radius: 5px;
 }
 
 .cta {
-    background-color: #D9D6FD;
+    background-color: var(--purple);
     border-radius: 10px;
     padding: 5px;
     align-self: center;
     width: 30%;
     outline-style: auto;
-    outline-color: #0A0A0A;
+    outline-color: var(--black);
 } 
 
 .follow {
@@ -281,20 +287,20 @@ figure {
 
   .see_more {
     border-style: none;
-    background-color:#f8f8f8;
+    background-color:var(--white);
     cursor: pointer;
     width: 100%;
   }
 
   input, textarea {
     outline-style: auto;
-    outline-color: #0A0A0A;
+    outline-color: var(--black);
   }
 
   @media (min-width: 200px) and (max-width: 599px) {
     a {
         text-decoration: none;
-        color: #0A0A0A;
+        color: var(--black);
         font-family: 'Poppins', sans-serif;
         display: flex;
         justify-content: center;
@@ -383,7 +389,7 @@ figure {
     
       .sliderImage {
         width: 100%;
-        max-width: 800px;
+        max-width: 790px;
         position: absolute;
         transition: all 0.5s;
         display: flex;
@@ -400,7 +406,7 @@ figure {
         border-radius: 50%;
         z-index: 10px;
         cursor: pointer;
-        background-color:#D9D6FD;
+        background-color: var(--purple);
       }
     
       .sliderButton:active {

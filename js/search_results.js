@@ -75,6 +75,7 @@ function showResults(result) {
         
             const a = document.createElement(`a`);
             const titleUrl = "post_specific.html?id=";
+            a.classList.add("center");
             a.href = titleUrl + `${result[i].id}`;
     
             const title = a.appendChild(document.createElement(`h2`));
