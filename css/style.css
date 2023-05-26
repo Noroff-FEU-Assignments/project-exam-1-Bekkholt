@@ -170,6 +170,10 @@ form {
   justify-content: center;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .contact_form_input {
   padding: 2%;
   margin: 2%;
