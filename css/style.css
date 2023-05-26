@@ -440,6 +440,10 @@ textarea {
     font-size: xx-large;
   }
 
+  a:hover {
+    text-decoration: underline;
+  }
+
   h1,
   h2,
   h3 {
@@ -466,6 +470,10 @@ textarea {
 
   .post_cards {
     max-width: 50%;
+  }
+
+  .post_cards:hover {
+    background-color: #bfbce0;
   }
 
   footer {
